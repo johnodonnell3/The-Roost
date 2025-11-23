@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Whiskey Drinks</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <h1>Whiskey Drinks</h1>
+
+    <div class="drink-container">
+        <a class="drink-card" href="recipes/oldfashioned.html">
+            <img src="https://via.placeholder.com/200" alt="Old Fashioned">
+            <p>Old Fashioned</p>
+        </a>
+
+        <a class="drink-card" href="recipes/whiskey_sour.html">
+            <img src="https://via.placeholder.com/200" alt="Whiskey Sour">
+            <p>Whiskey Sour</p>
+        </a>
+    </div>
+
+    <a class="back" href="../index.html">← Back to Categories</a>
+</body>
+</html>
