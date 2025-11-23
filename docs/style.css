@@ -1,26 +1,53 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Whiskey Drinks</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #fafafa;
+    padding: 20px;
+    text-align: center;
+}
 
-<body>
-    <h1>Whiskey Drinks</h1>
+h1 {
+    margin-bottom: 20px;
+}
 
-    <div class="drink-container">
-        <a class="drink-card" href="recipes/oldfashioned.html">
-            <img src="https://via.placeholder.com/200" alt="Old Fashioned">
-            <p>Old Fashioned</p>
-        </a>
+.category-container,
+.drink-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
-        <a class="drink-card" href="recipes/whiskey_sour.html">
-            <img src="https://via.placeholder.com/200" alt="Whiskey Sour">
-            <p>Whiskey Sour</p>
-        </a>
-    </div>
+.category, .drink-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 180px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.15s;
+}
 
-    <a class="back" href="../index.html">← Back to Categories</a>
-</body>
-</html>
+.category:hover, .drink-card:hover {
+    transform: scale(1.05);
+}
+
+.drink-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.recipe img {
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.back {
+    display: block;
+    margin-top: 30px;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
