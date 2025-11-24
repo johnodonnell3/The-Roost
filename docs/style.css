@@ -1,3 +1,4 @@
+/* Base body style */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,21 +7,30 @@ body {
     text-align: center;
 }
 
+/* Titles */
 h1 {
     margin-bottom: 20px;
+    font-size: 2.4rem; /* Larger title on desktop + homepage */
 }
 
+h2 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+/* CATEGORY + DRINK GRID LAYOUT */
 .category-container,
 .drink-container {
     display: flex;
-    flex-direction: column;   /* Stack vertically */
-    align-items: center;      /* Center the cards */
+    flex-direction: column;   /* Vertical layout */
+    align-items: center;      /* Center cards */
     gap: 20px;
 }
 
+/* CATEGORY CARDS + DRINK CARDS STYLING */
 .category, .drink-card {
-    width: 90%;                /* Almost full screen on phones */
-    max-width: 400px;          /* Looks good on large screens */
+    width: 90%;               /* Mobile-friendly width */
+    max-width: 400px;         /* Looks clean on desktop */
     background: white;
     border-radius: 12px;
     padding: 20px;
@@ -31,20 +41,24 @@ h1 {
 }
 
 .category:hover, .drink-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
+/* Card Images */
 .drink-card img {
     width: 100%;
     border-radius: 8px;
 }
 
+/* Recipe image */
 .recipe img {
-    width: 200px;
+    width: 90%;
+    max-width: 300px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
+/* BACK BUTTON */
 .back {
     display: block;
     margin-top: 30px;
@@ -53,25 +67,46 @@ h1 {
     font-size: 18px;
 }
 
-/* Centered but left-aligned ingredient & instruction lists */
+/* LIST ALIGNMENT for ingredients + instructions */
 .recipe ul,
 .recipe ol {
-    width: fit-content;       /* Shrinks the list to natural width */
-    margin: 0 auto;           /* Centers the entire block */
-    text-align: left;         /* Left-aligns text inside */
-    padding-left: 20px;       /* Proper bullet spacing */
+    width: fit-content;      /* Shrinks to content width */
+    margin: 0 auto;          /* Centers the list block */
+    text-align: left;        /* Left-align text */
+    padding-left: 20px;      /* Proper bullet alignment */
 }
 
+/* List item spacing */
 .recipe li {
     margin-bottom: 6px;
     line-height: 1.5;
+    font-size: 1rem;
 }
 
-/* Mobile spacing improvements */
-body {
-    padding: 10px;
-}
+/* MOBILE IMPROVEMENTS */
+@media (max-width: 600px) {
 
-h1 {
-    font-size: 1.6rem;
+    /* Bigger titles on mobile */
+    h1 {
+        font-size: 2rem;
+    }
+
+    .recipe h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Bigger text for ingredients + instructions */
+    .recipe li {
+        font-size: 1.1rem;
+    }
+
+    /* Bigger back button */
+    .back {
+        font-size: 1.2rem;
+    }
+
+    /* Adjust body padding for small screens */
+    body {
+        padding: 10px;
+    }
 }
