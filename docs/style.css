@@ -83,30 +83,37 @@ h2 {
     font-size: 1rem;
 }
 
-/* MOBILE IMPROVEMENTS */
+/* MOBILE FONT SCALING — make everything bigger on phones */
 @media (max-width: 600px) {
 
-    /* Bigger titles on mobile */
+    /* Main page titles */
     h1 {
-        font-size: 2rem;
+        font-size: 2.6rem;
     }
 
-    .recipe h2 {
+    /* Section headers */
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    /* List text (ingredients + instructions) */
+    .recipe li {
         font-size: 1.4rem;
     }
 
-    /* Bigger text for ingredients + instructions */
-    .recipe li {
-        font-size: 1.1rem;
-    }
-
-    /* Bigger back button */
-    .back {
+    /* Paragraphs & card labels */
+    p, li, a, body {
         font-size: 1.2rem;
     }
 
-    /* Adjust body padding for small screens */
-    body {
-        padding: 10px;
+    /* Category + drink card labels */
+    .drink-card p,
+    .category {
+        font-size: 1.4rem;
+    }
+
+    /* Back button */
+    .back {
+        font-size: 1.4rem;
     }
 }
