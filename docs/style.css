@@ -1,119 +1,140 @@
-/* Base body style */
+/* -------- GLOBAL -------- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #fafafa;
     padding: 20px;
     text-align: center;
+
+    /* Professional gradient background */
+    background: linear-gradient(180deg, #1a1a1f, #2a223b);
+    background-attachment: fixed;
+    color: white;
+
+    /* Smooth fade-in animation */
+    animation: fadeIn 0.6s ease-out;
 }
 
-/* Titles */
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* -------- HEADINGS -------- */
 h1 {
-    margin-bottom: 30px;
-    font-size: 2.4rem; /* Larger title on desktop + homepage */
+    margin-bottom: 20px;
+    font-size: 2.4rem;
 }
 
 h2 {
-    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 1.5rem;
 }
 
-/* CATEGORY + DRINK GRID LAYOUT */
+/* -------- CARD LAYOUT -------- */
 .category-container,
 .drink-container {
     display: flex;
-    flex-direction: column;   /* Vertical layout */
-    align-items: center;      /* Center cards */
+    flex-direction: column; 
+    align-items: center;
     gap: 20px;
 }
 
-/* CATEGORY CARDS + DRINK CARDS STYLING */
+/* Frosted-glass cards w/ hover animation */
 .category, .drink-card {
-    width: 90%;               /* Mobile-friendly width */
-    max-width: 400px;         /* Looks clean on desktop */
-    background: white;
-    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+
+    border-radius: 14px;
     padding: 20px;
     text-decoration: none;
-    color: black;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.15s;
+    color: white;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+
+    /* Hover lift + glow */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .category:hover, .drink-card:hover {
-    transform: scale(1.03);
+    transform: scale(1.04);
+    box-shadow: 0 6px 30px rgba(255,255,255,0.2);
 }
 
-/* Card Images */
+/* -------- IMAGES -------- */
 .drink-card img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-/* Recipe image */
 .recipe img {
     width: 90%;
-    max-width: 300px;
-    border-radius: 10px;
+    max-width: 320px;
+    border-radius: 12px;
     margin-bottom: 20px;
+
+    /* Soft fade-in for images */
+    animation: fadeIn 0.8s ease;
 }
 
-/* BACK BUTTON */
+/* -------- BACK BUTTON -------- */
 .back {
     display: block;
     margin-top: 30px;
-    color: #333;
+    color: #ffd86b;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.25s;
 }
 
-/* LIST ALIGNMENT for ingredients + instructions */
+.back:hover {
+    color: #fff3c3;
+}
+
+/* -------- LISTS (centered block but left text) -------- */
 .recipe ul,
 .recipe ol {
-    width: fit-content;      /* Shrinks to content width */
-    margin: 0 auto;          /* Centers the list block */
-    text-align: left;        /* Left-align text */
-    padding-left: 20px;      /* Proper bullet alignment */
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 20px;
 }
 
-/* List item spacing */
 .recipe li {
     margin-bottom: 6px;
     line-height: 1.5;
     font-size: 1rem;
 }
 
-/* MOBILE FONT SCALING — make everything bigger on phones */
+/* -------- MOBILE OPTIMIZATION -------- */
 @media (max-width: 600px) {
 
-    /* Main page titles */
     h1 {
         font-size: 2.6rem;
     }
 
-    /* Section headers */
     h2 {
         font-size: 1.8rem;
     }
 
-    /* List text (ingredients + instructions) */
     .recipe li {
         font-size: 1.4rem;
     }
 
-    /* Paragraphs & card labels */
-    p, li, a, body {
-        font-size: 1.2rem;
-    }
-
-    /* Category + drink card labels */
     .drink-card p,
     .category {
         font-size: 1.4rem;
     }
 
-    /* Back button */
     .back {
         font-size: 1.4rem;
+    }
+
+    body {
+        padding: 10px;
     }
 }
