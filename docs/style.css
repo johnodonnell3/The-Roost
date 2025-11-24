@@ -66,3 +66,12 @@ h1 {
     margin-bottom: 6px;
     line-height: 1.5;
 }
+
+/* Mobile spacing improvements */
+body {
+    padding: 10px;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
