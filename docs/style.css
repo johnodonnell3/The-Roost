@@ -110,31 +110,43 @@ h2 {
     font-size: 1rem;
 }
 
-/* -------- MOBILE OPTIMIZATION -------- */
+/* MOBILE FONT & LAYOUT IMPROVEMENTS */
 @media (max-width: 600px) {
 
-    h1 {
-        font-size: 2.6rem;
+    /* Keep recipe page from touching edges */
+    .recipe {
+        width: 92%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 10px 16px;   /* side padding added */
     }
 
-    h2 {
-        font-size: 1.8rem;
-    }
-
+    /* Slightly smaller but readable text */
     .recipe li {
-        font-size: 1.4rem;
+        font-size: 1.2rem;  
+        line-height: 1.5;
     }
 
+    /* Ingredients + Instructions headers */
+    .recipe h2 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+
+    /* Main page titles still large */
+    h1 {
+        font-size: 2.4rem;
+        margin-bottom: 20px;
+    }
+
+    /* Text labels under drink cards */
     .drink-card p,
     .category {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
+    /* Back button */
     .back {
-        font-size: 1.4rem;
-    }
-
-    body {
-        padding: 10px;
+        font-size: 1.3rem;
     }
 }
