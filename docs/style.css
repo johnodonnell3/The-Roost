@@ -13,16 +13,17 @@ h1 {
 .category-container,
 .drink-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;   /* Stack vertically */
+    align-items: center;      /* Center the cards */
     gap: 20px;
 }
 
 .category, .drink-card {
+    width: 90%;                /* Almost full screen on phones */
+    max-width: 400px;          /* Looks good on large screens */
     background: white;
     border-radius: 12px;
     padding: 20px;
-    width: 180px;
     text-decoration: none;
     color: black;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
